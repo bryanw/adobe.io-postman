@@ -50,16 +50,7 @@
 			"name": "List activities",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -85,16 +76,7 @@
 			"name": "Get AB Activity by ID",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -122,16 +104,7 @@
 			"name": "Delete AB Activity by ID",
 			"request": {
 				"method": "DELETE",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -159,16 +132,7 @@
 			"name": "Create AB Activity",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"name\": \"New API Activity\",\n    \"startsAt\": \"2017-05-01T08:00Z\",\n    \"endsAt\": \"2017-09-01T07:59:59Z\",\n    \"state\": \"saved\",\n    \"priority\": 100,\n    \"autoAllocateTraffic\": {\n        \"enabled\": false,\n        \"successEvaluationCriteria\": \"conversion_rate\"\n    },\n    \"locations\": {\n        \"mboxes\": [\n            {\n                \"locationLocalId\": 0,\n                \"name\": \"x1-serverside-ab\"\n            }\n        ]\n    },\n    \"experiences\": [\n        {\n            \"experienceLocalId\": 0,\n            \"name\": \"Experience A\",\n            \"visitorPercentage\": 34,\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 395818\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 1,\n            \"name\": \"Experience B\",\n            \"visitorPercentage\": 33,\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 395819\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 2,\n            \"name\": \"Experience C\",\n            \"visitorPercentage\": 33,\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 395820\n                }\n            ]\n        }\n    ],\n    \"metrics\": [\n        {\n            \"metricLocalId\": 32767,\n            \"name\": \"MY PRIMARY GOAL\",\n            \"conversion\": true,\n            \"mboxes\": [\n                {\n                    \"name\": \"order-complete\",\n                    \"successEvent\": \"mbox_shown\"\n                }\n            ],\n            \"action\": {\n                \"type\": \"count_once\"\n            }\n        }\n    ]\n}"
@@ -196,16 +160,7 @@
 			"name": "Update AB Activity",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"name\": \"New Activity Name\",\n\t\"state\": \"approved\",\n\t\"priority\": 10,\n\t\"locations\": {\n\t\t\"mboxes\": [\n\t\t\t{\n\t\t\t\t\"locationLocalId\": 0,\n\t\t\t\t\"name\": \"mbox_1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"locationLocalId\": 1,\n\t\t\t\t\"name\": \"mbox_2\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"locationLocalId\": 2,\n\t\t\t\t\"name\": \"mbox_3\"\n\t\t\t}\n\t\t]\n\t},\n\t\"experiences\": [\n\t\t{\n\t\t\t\"experienceLocalId\": 0,\n\t\t\t\"name\": \"Tom Hanks Cast Away\",\n\t\t\t\"offerLocations\": [\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 0,\n\t\t\t\t\t\"offerId\": 400546\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 1,\n\t\t\t\t\t\"offerId\": 400547\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 2,\n\t\t\t\t\t\"offerId\": 400546\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"experienceLocalId\": 1,\n\t\t\t\"name\": \"Default\",\n\t\t\t\"offerLocations\": [\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 0,\n\t\t\t\t\t\"offerId\": 400546\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 1,\n\t\t\t\t\t\"offerId\": 400547\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 2,\n\t\t\t\t\t\"offerId\": 400546\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t],\n\t\"metrics\": [\n\t\t{\n\t\t\t\"metricLocalId\": 3,\n\t\t\t\"name\": \"display about\",\n\t\t\t\"mboxes\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"event_1\",\n\t\t\t\t\t\"successEvent\": \"mbox_shown\"\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"metricLocalId\": 4,\n\t\t\t\"name\": \"display hero\",\n\t\t\t\"mboxes\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"event_2\",\n\t\t\t\t\t\"successEvent\": \"mbox_shown\"\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"metricLocalId\": 32767,\n\t\t\t\"name\": \"display userimg\",\n\t\t\t\"conversion\": true,\n\t\t\t\"action\": {\n\t\t\t\t\"type\": \"count_once\"\n\t\t\t},\n\t\t\t\"mboxes\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"event_3\",\n\t\t\t\t\t\"successEvent\": \"mbox_shown\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t],\n\t\"analytics\": {\n\t\t\"reportSuite\": \"mydemoreportsuite\",\n\t\t\"dataCollectionHost\": \"mydemoreportsuite.sc.omniture.com\"\n\t}\n}"
@@ -233,16 +188,7 @@
 			"name": "Get XT Activity by ID ",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -270,16 +216,7 @@
 			"name": "Delete XT Activity by ID",
 			"request": {
 				"method": "DELETE",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -307,16 +244,7 @@
 			"name": "Create XT Activity",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"name\": \"New XT API Activity\",\n    \"state\": \"saved\",\n    \"priority\": 10,\n    \"autoAllocateTraffic\": {\n        \"enabled\": false,\n        \"successEvaluationCriteria\": \"conversion_rate\"\n    },\n    \"locations\": {\n        \"mboxes\": [\n            {\n                \"locationLocalId\": 0,\n                \"name\": \"a1-serverside-xt\"\n            }\n        ]\n    },\n    \"experiences\": [\n        {\n            \"experienceLocalId\": 0,\n            \"name\": \"USA Experience\",\n            \"audienceIds\": [\n                1224696\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396067\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 1,\n            \"name\": \"UK Experience\",\n            \"audienceIds\": [\n                1224698\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396064\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 2,\n            \"name\": \"France Experience\",\n            \"audienceIds\": [\n                1224699\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396065\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 3,\n            \"name\": \"Australia Experience\",\n            \"audienceIds\": [\n                1224700\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396066\n                }\n            ]\n        }\n    ],\n    \"metrics\": [\n        {\n            \"metricLocalId\": 32767,\n            \"name\": \"metric_placeholder\",\n            \"conversion\": true,\n            \"mboxes\": [\n                {\n                    \"name\": \"conversion_placeholder\",\n                    \"successEvent\": \"mbox_shown\"\n                }\n            ],\n            \"action\": {\n                \"type\": \"count_once\"\n            }\n        }\n    ],\n    \"analytics\": {\n        \"reportSuite\": \"adobetargetmobilewesteros\",\n        \"dataCollectionHost\": \"adobetargetmobile.sc.omtrdc.net\"\n    }\n}"
@@ -344,16 +272,7 @@
 			"name": "Update XT Activity",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"name\": \"New XT API Activity 2\",\n    \"state\": \"saved\",\n    \"priority\": 10,\n    \"autoAllocateTraffic\": {\n        \"enabled\": false,\n        \"successEvaluationCriteria\": \"conversion_rate\"\n    },\n    \"locations\": {\n        \"mboxes\": [\n            {\n                \"locationLocalId\": 0,\n                \"name\": \"a1-serverside-xt\"\n            }\n        ]\n    },\n    \"experiences\": [\n        {\n            \"experienceLocalId\": 0,\n            \"name\": \"USA Experience\",\n            \"audienceIds\": [\n                1224696\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396067\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 1,\n            \"name\": \"UK Experience\",\n            \"audienceIds\": [\n                1224698\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396064\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 2,\n            \"name\": \"France Experience\",\n            \"audienceIds\": [\n                1224699\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396065\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 3,\n            \"name\": \"Australia Experience\",\n            \"audienceIds\": [\n                1224700\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396066\n                }\n            ]\n        }\n    ],\n    \"metrics\": [\n        {\n            \"metricLocalId\": 32767,\n            \"name\": \"metric_placeholder\",\n            \"conversion\": true,\n            \"mboxes\": [\n                {\n                    \"name\": \"conversion_placeholder\",\n                    \"successEvent\": \"mbox_shown\"\n                }\n            ],\n            \"action\": {\n                \"type\": \"count_once\"\n            }\n        }\n    ],\n    \"analytics\": {\n        \"reportSuite\": \"adobetargetmobilewesteros\",\n        \"dataCollectionHost\": \"adobetargetmobile.sc.omtrdc.net\"\n    }\n}"
@@ -381,16 +300,7 @@
 			"name": "Update Activity Name",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\"name\": \"My XT Activity\"\n}"
@@ -418,16 +328,7 @@
 			"name": "Update Activity State",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\"state\": \"deactivated\"\n}"
@@ -456,16 +357,7 @@
 			"name": "Update Activity Priority",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\"priority\": \"110\"\n}"
@@ -494,16 +386,7 @@
 			"name": "Update Activity Schedule",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\"startsAt\": \"2017-05-01T08:00Z\",\n\"endsAt\": \"2017-09-01T07:59:59Z\"\n}"
@@ -532,16 +415,7 @@
 			"name": "Get Activity Changelog",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -569,16 +443,7 @@
 			"name": "Get AB Peformance report",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -608,16 +473,7 @@
 			"name": "Get XT Peformance report",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -647,16 +503,7 @@
 			"name": "List offers",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -688,16 +535,7 @@
 			"name": "Get Offer by ID",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -725,16 +563,7 @@
 			"name": "Create Offer",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": " {\n \"name\": \"My new offer\",\n \"content\": \"<div>The content of the offer</div>\"\n }\n"
@@ -761,16 +590,7 @@
 			"name": "Update Offer by ID",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": " {\n\t\"name\": \"Your existing offer\",\n\t\"content\": \"<div>Updated content</div>\"\n }\n"
@@ -798,16 +618,7 @@
 			"name": "Delete Offer by ID",
 			"request": {
 				"method": "DELETE",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -835,16 +646,7 @@
 			"name": "List Audiences",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -881,16 +683,7 @@
 			"name": "Get Audience by ID",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -918,16 +711,7 @@
 			"name": "Create Audience",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"name\": \"New Audience\",\n\t\"description\":\"Description for my audience\",\n    \"targetRule\": {\n        \"and\": [\n            {\n                \"page\": \"url\",\n\t\t\t\t\"equals\":[\n\t\t\t\t\t\"http://www.myhomepage.com/\"\n\t\t\t\t]\n            },\n            {\n                \"geo\": \"region\",\n                \"matches\": [\n                    \"california\"\n                ]\n            }\n        ]\n    }\n}"
@@ -953,16 +737,7 @@
 			"name": "Update Audience by ID",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"name\": \"Homepage visitors from California\",\n\t\"description\":\"Description for my audience\",\n    \"targetRule\": {\n        \"and\": [\n            {\n                \"page\": \"url\",\n\t\t\t\t\"equals\":[\n\t\t\t\t\t\"http://www.mynewhomepage.com/\"\n\t\t\t\t]\n            },\n            {\n                \"geo\": \"region\",\n                \"matches\": [\n                    \"california\"\n                ]\n            }\n        ]\n    }\n}"
@@ -989,16 +764,7 @@
 			"name": "Delete Audience by ID",
 			"request": {
 				"method": "DELETE",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -1025,16 +791,7 @@
 			"name": "List mboxes",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -1066,16 +823,7 @@
 			"name": "List mbox parameters",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -1108,16 +856,7 @@
 			"name": "List profile parameters",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -1144,16 +883,7 @@
 			"name": "Get Environments",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Api-Key",
-						"value": "{{api_key}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/vnd.adobe.target.v1+json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -1206,6 +936,22 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"id": "e5ad1edc-859a-4491-ba9a-6fd8a2ad3a4a",
+			"key": "X-Api-Key",
+			"value": "{{api_key}}",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "cbc56cdd-9c44-43c2-bf23-ffffff3092bd",
+			"key": "Content-Type",
+			"value": "application/vnd.adobe.target.v1+json",
+			"type": "string",
+			"description": ""
 		}
 	]
 }
