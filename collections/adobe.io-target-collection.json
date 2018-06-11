@@ -52,10 +52,6 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -90,10 +86,6 @@
 			"request": {
 				"method": "GET",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -132,10 +124,6 @@
 				"method": "DELETE",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -172,10 +160,6 @@
 			"request": {
 				"method": "POST",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -214,10 +198,6 @@
 				"method": "PUT",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -254,10 +234,6 @@
 			"request": {
 				"method": "GET",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -296,10 +272,6 @@
 				"method": "DELETE",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -336,10 +308,6 @@
 			"request": {
 				"method": "POST",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -378,10 +346,6 @@
 				"method": "PUT",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -419,10 +383,6 @@
 				"method": "PUT",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -459,10 +419,6 @@
 			"request": {
 				"method": "PUT",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -502,10 +458,6 @@
 				"method": "PUT",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -543,10 +495,6 @@
 			"request": {
 				"method": "PUT",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -586,10 +534,6 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -626,10 +570,6 @@
 			"request": {
 				"method": "GET",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -670,10 +610,6 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -712,10 +648,6 @@
 			"request": {
 				"method": "GET",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -758,10 +690,6 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -799,10 +727,6 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -838,10 +762,6 @@
 			"request": {
 				"method": "PUT",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -880,10 +800,6 @@
 				"method": "DELETE",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -920,10 +836,6 @@
 			"request": {
 				"method": "GET",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -971,10 +883,6 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -1012,10 +920,6 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -1050,10 +954,6 @@
 			"request": {
 				"method": "PUT",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -1091,10 +991,6 @@
 				"method": "DELETE",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -1130,10 +1026,6 @@
 			"request": {
 				"method": "GET",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -1175,10 +1067,6 @@
 			"request": {
 				"method": "GET",
 				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
 					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
@@ -1222,10 +1110,6 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -1262,10 +1146,6 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
 						"key": "X-Api-Key",
 						"value": "{{api_key}}"
 					},
@@ -1296,6 +1176,16 @@
 			"response": []
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
