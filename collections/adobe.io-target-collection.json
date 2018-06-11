@@ -952,7 +952,7 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "https://mc.adobe.io/{{tenant}}/target/offers/content/391902",
+					"raw": "https://mc.adobe.io/{{tenant}}/target/audiences/content/391902",
 					"protocol": "https",
 					"host": [
 						"mc",
