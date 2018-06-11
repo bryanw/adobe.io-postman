@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "af3ae6a9-8376-4d2d-98cf-d0895203f22d",
-		"name": "Adobe Target Admin APIs",
+		"_postman_id": "c486e833-6f69-4510-96f0-dfc88b9b10c8",
+		"name": "Adobe IO Target Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -64,7 +64,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/activities",
 					"protocol": "https",
@@ -100,7 +103,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/168798",
 					"protocol": "https",
@@ -138,7 +144,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/178096",
 					"protocol": "https",
@@ -258,7 +267,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/xt/167169",
 					"protocol": "https",
@@ -296,7 +308,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/xt/168333",
 					"protocol": "https",
@@ -583,7 +598,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/173788/changelog",
 					"protocol": "https",
@@ -621,7 +639,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/166423/report/performance",
 					"protocol": "https",
@@ -661,7 +682,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/167169/report/performance",
 					"protocol": "https",
@@ -701,7 +725,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/offers?limit=10",
 					"protocol": "https",
@@ -743,7 +770,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/offers/content/391902",
 					"protocol": "https",
@@ -903,7 +933,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/audiences/?limit=50&sortBy=-name",
 					"protocol": "https",
@@ -950,9 +983,12 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
-					"raw": "https://mc.adobe.io/{{tenant}}/target/audiences/content/391902",
+					"raw": "https://mc.adobe.io/{{tenant}}/target/offers/content/391902",
 					"protocol": "https",
 					"host": [
 						"mc",
@@ -1107,7 +1143,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/mboxes?limit=5",
 					"protocol": "https",
@@ -1149,7 +1188,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/mbox/a1-mobile-mboxparams?limit=5",
 					"protocol": "https",
@@ -1192,7 +1234,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/profileattributes/mbox",
 					"protocol": "https",
@@ -1229,7 +1274,10 @@
 						"value": "application/vnd.adobe.target.v1+json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://mc.adobe.io/{{tenant}}/target/environments",
 					"protocol": "https",
@@ -1246,6 +1294,28 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b48d42b1-b7c4-4ee9-bcca-99bcc0720421",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "49d4401f-11eb-4413-b002-21ccf3de1434",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
