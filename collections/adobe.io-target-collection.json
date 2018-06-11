@@ -1,0 +1,1251 @@
+{
+	"info": {
+		"_postman_id": "af3ae6a9-8376-4d2d-98cf-d0895203f22d",
+		"name": "Adobe Target Admin APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Exchange JWT for Access token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://ims-na1.adobelogin.com/ims/exchange/jwt/?client_id=77128b9bb9e447ea832c52d012691d31&client_secret=99e4250e-5ddb-4a94-a6b5-a4168130f6a4&jwt_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MDA0ODIzMTQsImlzcyI6IkI4QTA1NEQ5NTg4MDdGNzcwQTQ5NURENkBBZG9iZU9yZyIsInN1YiI6IjJENDcxQUFFNTg5MjdCQTcwQTQ5NUNDMkB0ZWNoYWNjdC5hZG9iZS5jb20iLCJhdWQiOiJodHRwczovL2ltcy1uYTEuYWRvYmVsb2dpbi5jb20vYy83NzEyOGI5YmI5ZTQ0N2VhODMyYzUyZDAxMjY5MWQzMSIsImh0dHBzOi8vaW1zLW5hMS5hZG9iZWxvZ2luLmNvbS9zL2VudF9tYXJrZXRpbmdfc2RrIjp0cnVlfQ.WPEQO6RtnDSqqSPCuni5CG77bM0VUACCFrLftOTHAr6CQLaYeXo3gzvTHDBqLe2R0TkyNpMuXOBpsSjtMxbLOM4MaI5TThqQYg11f6IPsXpFztDCT53wuBdgxpge7tA8B7_Uiql5fKb1_N1diK5XeImut00FF1zDr32POSgIVdKILonG0RK_nqt49Nobi6TfAfu5ml6isnB2DVr4b49Qtr2X5Es_wHkg_sZNYGY_XRlF4HiPZBZewmcpY3oomLbHDxIMApIDcWK4-lMEDn8m0_iwdqTLVwPNIWSlq6zge6aWDSJ0bRDCD-IZHWI1f0-z7mpYCMOsxyNRlHY4WBWgkA",
+					"protocol": "https",
+					"host": [
+						"ims-na1",
+						"adobelogin",
+						"com"
+					],
+					"path": [
+						"ims",
+						"exchange",
+						"jwt",
+						""
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "77128b9bb9e447ea832c52d012691d31"
+						},
+						{
+							"key": "client_secret",
+							"value": "99e4250e-5ddb-4a94-a6b5-a4168130f6a4"
+						},
+						{
+							"key": "jwt_token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MDA0ODIzMTQsImlzcyI6IkI4QTA1NEQ5NTg4MDdGNzcwQTQ5NURENkBBZG9iZU9yZyIsInN1YiI6IjJENDcxQUFFNTg5MjdCQTcwQTQ5NUNDMkB0ZWNoYWNjdC5hZG9iZS5jb20iLCJhdWQiOiJodHRwczovL2ltcy1uYTEuYWRvYmVsb2dpbi5jb20vYy83NzEyOGI5YmI5ZTQ0N2VhODMyYzUyZDAxMjY5MWQzMSIsImh0dHBzOi8vaW1zLW5hMS5hZG9iZWxvZ2luLmNvbS9zL2VudF9tYXJrZXRpbmdfc2RrIjp0cnVlfQ.WPEQO6RtnDSqqSPCuni5CG77bM0VUACCFrLftOTHAr6CQLaYeXo3gzvTHDBqLe2R0TkyNpMuXOBpsSjtMxbLOM4MaI5TThqQYg11f6IPsXpFztDCT53wuBdgxpge7tA8B7_Uiql5fKb1_N1diK5XeImut00FF1zDr32POSgIVdKILonG0RK_nqt49Nobi6TfAfu5ml6isnB2DVr4b49Qtr2X5Es_wHkg_sZNYGY_XRlF4HiPZBZewmcpY3oomLbHDxIMApIDcWK4-lMEDn8m0_iwdqTLVwPNIWSlq6zge6aWDSJ0bRDCD-IZHWI1f0-z7mpYCMOsxyNRlHY4WBWgkA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List activities",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get AB Activity by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/168798",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"ab",
+						"168798"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete AB Activity by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/178096",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"ab",
+						"178096"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create AB Activity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New API Activity\",\n    \"startsAt\": \"2017-05-01T08:00Z\",\n    \"endsAt\": \"2017-09-01T07:59:59Z\",\n    \"state\": \"saved\",\n    \"priority\": 100,\n    \"autoAllocateTraffic\": {\n        \"enabled\": false,\n        \"successEvaluationCriteria\": \"conversion_rate\"\n    },\n    \"locations\": {\n        \"mboxes\": [\n            {\n                \"locationLocalId\": 0,\n                \"name\": \"x1-serverside-ab\"\n            }\n        ]\n    },\n    \"experiences\": [\n        {\n            \"experienceLocalId\": 0,\n            \"name\": \"Experience A\",\n            \"visitorPercentage\": 34,\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 395818\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 1,\n            \"name\": \"Experience B\",\n            \"visitorPercentage\": 33,\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 395819\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 2,\n            \"name\": \"Experience C\",\n            \"visitorPercentage\": 33,\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 395820\n                }\n            ]\n        }\n    ],\n    \"metrics\": [\n        {\n            \"metricLocalId\": 32767,\n            \"name\": \"MY PRIMARY GOAL\",\n            \"conversion\": true,\n            \"mboxes\": [\n                {\n                    \"name\": \"order-complete\",\n                    \"successEvent\": \"mbox_shown\"\n                }\n            ],\n            \"action\": {\n                \"type\": \"count_once\"\n            }\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"ab",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update AB Activity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"New Activity Name\",\n\t\"state\": \"approved\",\n\t\"priority\": 10,\n\t\"locations\": {\n\t\t\"mboxes\": [\n\t\t\t{\n\t\t\t\t\"locationLocalId\": 0,\n\t\t\t\t\"name\": \"mbox_1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"locationLocalId\": 1,\n\t\t\t\t\"name\": \"mbox_2\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"locationLocalId\": 2,\n\t\t\t\t\"name\": \"mbox_3\"\n\t\t\t}\n\t\t]\n\t},\n\t\"experiences\": [\n\t\t{\n\t\t\t\"experienceLocalId\": 0,\n\t\t\t\"name\": \"Tom Hanks Cast Away\",\n\t\t\t\"offerLocations\": [\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 0,\n\t\t\t\t\t\"offerId\": 400546\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 1,\n\t\t\t\t\t\"offerId\": 400547\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 2,\n\t\t\t\t\t\"offerId\": 400546\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"experienceLocalId\": 1,\n\t\t\t\"name\": \"Default\",\n\t\t\t\"offerLocations\": [\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 0,\n\t\t\t\t\t\"offerId\": 400546\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 1,\n\t\t\t\t\t\"offerId\": 400547\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"locationLocalId\": 2,\n\t\t\t\t\t\"offerId\": 400546\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t],\n\t\"metrics\": [\n\t\t{\n\t\t\t\"metricLocalId\": 3,\n\t\t\t\"name\": \"display about\",\n\t\t\t\"mboxes\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"event_1\",\n\t\t\t\t\t\"successEvent\": \"mbox_shown\"\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"metricLocalId\": 4,\n\t\t\t\"name\": \"display hero\",\n\t\t\t\"mboxes\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"event_2\",\n\t\t\t\t\t\"successEvent\": \"mbox_shown\"\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\t\"metricLocalId\": 32767,\n\t\t\t\"name\": \"display userimg\",\n\t\t\t\"conversion\": true,\n\t\t\t\"action\": {\n\t\t\t\t\"type\": \"count_once\"\n\t\t\t},\n\t\t\t\"mboxes\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"event_3\",\n\t\t\t\t\t\"successEvent\": \"mbox_shown\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t],\n\t\"analytics\": {\n\t\t\"reportSuite\": \"mydemoreportsuite\",\n\t\t\"dataCollectionHost\": \"mydemoreportsuite.sc.omniture.com\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/183916",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"ab",
+						"183916"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get XT Activity by ID ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/xt/167169",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"xt",
+						"167169"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete XT Activity by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/xt/168333",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"xt",
+						"168333"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create XT Activity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New XT API Activity\",\n    \"state\": \"saved\",\n    \"priority\": 10,\n    \"autoAllocateTraffic\": {\n        \"enabled\": false,\n        \"successEvaluationCriteria\": \"conversion_rate\"\n    },\n    \"locations\": {\n        \"mboxes\": [\n            {\n                \"locationLocalId\": 0,\n                \"name\": \"a1-serverside-xt\"\n            }\n        ]\n    },\n    \"experiences\": [\n        {\n            \"experienceLocalId\": 0,\n            \"name\": \"USA Experience\",\n            \"audienceIds\": [\n                1224696\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396067\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 1,\n            \"name\": \"UK Experience\",\n            \"audienceIds\": [\n                1224698\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396064\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 2,\n            \"name\": \"France Experience\",\n            \"audienceIds\": [\n                1224699\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396065\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 3,\n            \"name\": \"Australia Experience\",\n            \"audienceIds\": [\n                1224700\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396066\n                }\n            ]\n        }\n    ],\n    \"metrics\": [\n        {\n            \"metricLocalId\": 32767,\n            \"name\": \"metric_placeholder\",\n            \"conversion\": true,\n            \"mboxes\": [\n                {\n                    \"name\": \"conversion_placeholder\",\n                    \"successEvent\": \"mbox_shown\"\n                }\n            ],\n            \"action\": {\n                \"type\": \"count_once\"\n            }\n        }\n    ],\n    \"analytics\": {\n        \"reportSuite\": \"adobetargetmobilewesteros\",\n        \"dataCollectionHost\": \"adobetargetmobile.sc.omtrdc.net\"\n    }\n}"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/xt/",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"xt",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update XT Activity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New XT API Activity 2\",\n    \"state\": \"saved\",\n    \"priority\": 10,\n    \"autoAllocateTraffic\": {\n        \"enabled\": false,\n        \"successEvaluationCriteria\": \"conversion_rate\"\n    },\n    \"locations\": {\n        \"mboxes\": [\n            {\n                \"locationLocalId\": 0,\n                \"name\": \"a1-serverside-xt\"\n            }\n        ]\n    },\n    \"experiences\": [\n        {\n            \"experienceLocalId\": 0,\n            \"name\": \"USA Experience\",\n            \"audienceIds\": [\n                1224696\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396067\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 1,\n            \"name\": \"UK Experience\",\n            \"audienceIds\": [\n                1224698\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396064\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 2,\n            \"name\": \"France Experience\",\n            \"audienceIds\": [\n                1224699\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396065\n                }\n            ]\n        },\n        {\n            \"experienceLocalId\": 3,\n            \"name\": \"Australia Experience\",\n            \"audienceIds\": [\n                1224700\n            ],\n            \"offerLocations\": [\n                {\n                    \"locationLocalId\": 0,\n                    \"offerId\": 396066\n                }\n            ]\n        }\n    ],\n    \"metrics\": [\n        {\n            \"metricLocalId\": 32767,\n            \"name\": \"metric_placeholder\",\n            \"conversion\": true,\n            \"mboxes\": [\n                {\n                    \"name\": \"conversion_placeholder\",\n                    \"successEvent\": \"mbox_shown\"\n                }\n            ],\n            \"action\": {\n                \"type\": \"count_once\"\n            }\n        }\n    ],\n    \"analytics\": {\n        \"reportSuite\": \"adobetargetmobilewesteros\",\n        \"dataCollectionHost\": \"adobetargetmobile.sc.omtrdc.net\"\n    }\n}"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/xt/183919",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"xt",
+						"183919"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Activity Name",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"My XT Activity\"\n}"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/168333/name",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"168333",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Activity State",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"state\": \"deactivated\"\n}"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/168816/state",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"ab",
+						"168816",
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Activity Priority",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"priority\": \"110\"\n}"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/168816/priority",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"ab",
+						"168816",
+						"priority"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Activity Schedule",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"startsAt\": \"2017-05-01T08:00Z\",\n\"endsAt\": \"2017-09-01T07:59:59Z\"\n}"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/168816/schedule",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"ab",
+						"168816",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Activity Changelog",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/173788/changelog",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"173788",
+						"changelog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get AB Peformance report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/166423/report/performance",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"ab",
+						"166423",
+						"report",
+						"performance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get XT Peformance report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/activities/ab/167169/report/performance",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"activities",
+						"ab",
+						"167169",
+						"report",
+						"performance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List offers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/offers?limit=10",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"offers"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Offer by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/offers/content/391902",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"offers",
+						"content",
+						"391902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Offer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \"name\": \"My new offer\",\n \"content\": \"<div>The content of the offer</div>\"\n }\n"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/offers/content",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"offers",
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Offer by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n\t\"name\": \"Your existing offer\",\n\t\"content\": \"<div>Updated content</div>\"\n }\n"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/offers/content/438180",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"offers",
+						"content",
+						"438180"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Offer by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/offers/content/438180",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"offers",
+						"content",
+						"438180"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Audiences",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/audiences/?limit=50&sortBy=-name",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"audiences",
+						""
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "50"
+						},
+						{
+							"key": "sortBy",
+							"value": "-name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Audience by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/offers/content/391902",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"offers",
+						"content",
+						"391902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Audience",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"New Audience\",\n\t\"description\":\"Description for my audience\",\n    \"targetRule\": {\n        \"and\": [\n            {\n                \"page\": \"url\",\n\t\t\t\t\"equals\":[\n\t\t\t\t\t\"http://www.myhomepage.com/\"\n\t\t\t\t]\n            },\n            {\n                \"geo\": \"region\",\n                \"matches\": [\n                    \"california\"\n                ]\n            }\n        ]\n    }\n}"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/audiences",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"audiences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Audience by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Homepage visitors from California\",\n\t\"description\":\"Description for my audience\",\n    \"targetRule\": {\n        \"and\": [\n            {\n                \"page\": \"url\",\n\t\t\t\t\"equals\":[\n\t\t\t\t\t\"http://www.mynewhomepage.com/\"\n\t\t\t\t]\n            },\n            {\n                \"geo\": \"region\",\n                \"matches\": [\n                    \"california\"\n                ]\n            }\n        ]\n    }\n}"
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/audiences/1537195",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"audiences",
+						"1537195"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Audience by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/audiences/1537214",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"audiences",
+						"1537214"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List mboxes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/mboxes?limit=5",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"mboxes"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List mbox parameters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/mbox/a1-mobile-mboxparams?limit=5",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"mbox",
+						"a1-mobile-mboxparams"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List profile parameters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/profileattributes/mbox",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"profileattributes",
+						"mbox"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Environments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "X-Api-Key",
+						"value": "{{api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.adobe.target.v1+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://mc.adobe.io/{{tenant}}/target/environments",
+					"protocol": "https",
+					"host": [
+						"mc",
+						"adobe",
+						"io"
+					],
+					"path": [
+						"{{tenant}}",
+						"target",
+						"environments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "f7e048ed-1d68-4b63-8017-2f0b64ce34bd",
+  "name": "Adobe IO Target Integration Environment",
+  "values": [
+    {
+      "enabled": true,
+      "key": "IMS",
+      "value": "https://ims-na1.adobelogin.com",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "PLATFORM_GATEWAY",
+      "value": "https://platform.adobe.io",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "clientID",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "clientSecret",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "IMSOrg",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "key": "techacct",
+      "value": "",
+      "description": "",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "meta_scope",
+      "value": "",
+      "description": "",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "secret",
+      "value": "",
+      "description": "",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "enabled": true,
+      "key": "jwt_token",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "enabled": false,
+      "key": "access_token",
+      "value": "",
+      "type": "text"
+    }
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2018-06-11T04:15:29.345Z",
+  "_postman_exported_using": "Postman/6.1.3"
+}
